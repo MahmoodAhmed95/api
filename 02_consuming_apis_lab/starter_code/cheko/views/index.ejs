@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chuck Norris Jokes</title>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+
+<body>
+  <div>
+    <h1>Chuck Norris Jokes</h1>
+  </div>
+  <div>
+    <img src="./images/chucknorris.png" alt="chucknorris">
+  </div>
+  <div>
+
+    <form method="GET">
+      <% for (var i=0; i < categories.length; i++) { %>
+        <label>
+          <input type="radio" name="category" value="<%= categories[i] %>">
+          <%= categories[i] %>
+        </label>
+        <% } %>
+          <br>
+          <button type="submit">Get Chuck Norris Joke</button>
+    </form>
+    <% if (joke) { %>
+      <p>
+        <%= joke %>
+      </p>
+      <% } %>
+  </div>
+</body>
+
+</html>
